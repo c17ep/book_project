@@ -1,0 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(http://fonts.googleapis.com/css?family=Coming+Soon);
+
+body {
+	background-image: "../images/books3.JPG";
+}
+
+h1 {
+	font-family: 'Roboto Slab', serif;
+}
+
+h3 {
+	font-family: 'Coming Soon', cursive;
+}

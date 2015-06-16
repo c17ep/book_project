@@ -9,7 +9,9 @@ class ScrapeLibrary
 
 	def get_all_books
 		titles = @ql_nokogiri.css("div.q-target h3").collect { |t| t.text }
-		authors = @ql_nokogiri.css("div.q-target div.grid-author a").collect { |a| a.text }
+		authors = @ql_nokogiri.css("div.q-target div.grid-author a").collect { |a| a.text }.map do |au|
+			au.split(",")[0..1].join(",")
+		end
 		images = @ql_nokogiri.css("div.q-target img").collect { |i| i }
 		info = Array.new(titles.length) { Hash.new }
 		x = 0
